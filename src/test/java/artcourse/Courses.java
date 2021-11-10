@@ -16,7 +16,7 @@ import io.restassured.specification.RequestSpecification;
 public class Courses {
 	 public String accessToken;
 	 
-	 @Test
+	 @BeforeSuite
 	 public void register() {
 			
 			JSONObject reqParams = new JSONObject();

@@ -61,7 +61,7 @@ public class Courses {
 		System.out.println(res.body().prettyPrint());
 	}
 	
-	@Test
+	@Test (priority=2)
 	public void getCourse () {
 		baseURI = "http://localhost:3000/660";
 		RequestSpecification req =given();
@@ -74,7 +74,7 @@ public class Courses {
 
 	}
 	
-	@Test
+	@Test (priority=1)
 	public void postCource () {
 		org.json.JSONObject reqParams = new JSONObject();
 		reqParams.put("id","8");
@@ -92,7 +92,7 @@ public class Courses {
 	    Assert.assertEquals(auther,"fatma");
 	}
 	
-	@Test
+	@Test (priority=3)
 	public void editCource () {
 		org.json.JSONObject reqParams = new JSONObject();
 		reqParams.put("auther","jasmin");
@@ -108,7 +108,7 @@ public class Courses {
 	    Assert.assertEquals(auther,"jasmin");
 	}
 	
-	@Test
+	@Test (priority=4)
 	public void deleteCource () {
 		org.json.JSONObject reqParams = new JSONObject();
 		baseURI = "http://localhost:3000/660";
